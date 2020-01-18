@@ -62,13 +62,13 @@
 				<div class="header__wrap">
 					<div class="header__left">
 						<a href="./" class="header__logo">
-							<div class="header__logo-pic"><img src="https://scontent-arn2-2.cdninstagram.com/v/t51.2885-19/s150x150/22352313_162246724363380_4679266598685507584_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_ohc=ohh_Xe4ehwIAX8uBDAU&oh=727c493b87308bdda3e1e26288da1f27&oe=5EA9B1D2" alt="Василий Карпов"></div>
+							<div class="header__logo-pic"><img src="https://scontent-arn2-2.cdninstagram.com/v/t51.2885-19/s150x150/22352313_162246724363380_4679266598685507584_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_ohc=ohh_Xe4ehwIAX8uBDAU&oh=dbb8ef11a90914e871329b47846299fb&oe=5ED13ED2" alt="Василий Карпов"></div>
 							<div class="header__logo-txt">vasiliy.karpov</div>
 						</a>
 						<div class="header__title">Василий Карпов</div>
 					</div>
 					<div id="settingsContainer" class="header__right" style="display:none">
-						<button onclick="window.open('http://itsinsta.site/page.html?project=vasiliy.karpov');" class="btn stories-popup__buy">Настроить</button>
+						<button onclick="window.open('http://itsinsta.site/page.html?project=vasiliy.karpov', '_self');" class="btn stories-popup__buy">Настроить</button>
 					</div>
 				</div>
 			</div>
@@ -246,7 +246,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 $(document).ready(function(){
 	var lid = getUrlParameter("lid");
-	if (lid) {
+	if (lid && lid != "true") {
         localStorage.setItem("hasToken", true);
 
 		$("#settingsContainer").show();
